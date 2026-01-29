@@ -3,14 +3,17 @@ import random
 import math
 import asyncio
 from datetime import timedelta
+from dotenv import load_dotenv
 
 import discord
 from discord.ext import commands
 
+load_dotenv()
+
 # ------------- CONFIG -------------
 
 MESSAGE_THRESHOLD = 20        # messages before a quiz triggers
-ANSWER_TIMEOUT_SECONDS = 60   # how long they have to answer
+ANSWER_TIMEOUT_SECONDS = 360   # how long they have to answer
 TIMEOUT_MINUTES = 20          # punishment timeout
 
 # Image shown when a quiz triggers (replace with your own URL or leave None)
@@ -25,7 +28,7 @@ intents.members = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # Per-user message counter
-message_counts = {}           # user_id -> count
+message_counts = {}           # user_id -> countload_dotenv# Load environment variables
 active_quiz_users = set()     # user_ids currently in a quiz
 
 
