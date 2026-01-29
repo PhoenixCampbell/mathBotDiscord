@@ -2,7 +2,7 @@ import os
 import random
 import math
 import asyncio
-from datetime import timedelta
+import datetime
 from dotenv import load_dotenv
 
 import discord
@@ -614,8 +614,8 @@ def check_answer(user_input: str, answer_meta: dict) -> bool:
 
 async def timeout_user(member: discord.Member, guild: discord.Guild, minutes: int):
     try:
-        until = discord.utils.utcnow() + timedelta(minutes=minutes)
-        await member.edit(timeout=until, reason="Thats not quite right my son, Agartha may be in danger...\nTake some time to study and come back when you are ready - study timeout.")
+        until = datetime.timedelta(minutes=minutes)
+        await member.timeout(until)
     except discord.Forbidden:
         # Missing permissions / role issue
         channel = guild.system_channel or next(
