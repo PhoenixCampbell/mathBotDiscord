@@ -1,0 +1,27 @@
+- # Overview
+- This is a bot for my discord channels to keep me and my friends math skiils sharp and honed.
+- Using a mix of different math concepts (Calculus, Trigonometry, Arithmetic, Linear Algebra, Geometry) the discord user is prompted after a set amount of time to answer a randomly selected problem also randomly selected among the catagories.
+- The user can either answer the question which then gives a response and congratulations, or times out the user for a set amount of time.
+- This encourages study breaks and allows the user time to hone their skills without distraction
+- Locally run on my personal machines, if you wish to run it on yours for your own groups, either use the link below or follow the installation instructions
+- ## Discord Direct Install Link
+- https://discord.com/oauth2/authorize?client_id=1465552118328066198&permissions=1099511630848&integration_type=0&scope=bot
+-
+- ## Personal Install
+- git clone this repository on a computer or server that will run consistantly
+	- `git clone`
+- set up a venv folder in python to locally manage extensions
+- once once activated install the following dependencies through pip
+	- `pip install discord.py`
+	- `pip install dotenv`
+- this wil give you access to discord development libraries and also the .env dependacies
+- set up personal bot logic from the Discord developers webiste to get your own `DISCORD_BOT_TOKEN` which will be placed in the code directly or safely in a `.env` folder
+- while still in the environment, run
+- `python .\math_bot.py`
+- this will run the local instance for the backend of your discord bot that will run 24/7
+- ## Generate URL
+- Generate a URL for a `bot` with permissions to `View Channels`,`Moderate Members`, and `Send Messages` to generate a URL
+- Use this URL to add the bot to any server you personally own or send it to someone to add it to their own server.
+-
+- # Updates
+- I will be updating this script as recommendations of content come in, my mathamatics knowledge expands, I find time to, or I pass off leadership to someone else. Thank you for checking out this project of mine.
